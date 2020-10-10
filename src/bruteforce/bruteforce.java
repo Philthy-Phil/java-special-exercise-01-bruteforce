@@ -41,6 +41,7 @@ public class bruteforce {
 
 //		sout("" + key);
 
+		// Crack in progress
 		String[] keySplit = key.split("");
 		String[] solution = new String[4];
 
