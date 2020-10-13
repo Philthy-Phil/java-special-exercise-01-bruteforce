@@ -41,13 +41,13 @@ public class bruteforce {
 
 //		sout("" + key);
 
-		// Crack in progress
 		String[] keySplit = key.split("");
 		String[] solution = new String[4];
 
 //		sout(keySplit[0]);
 //		sout(numbers[0]);
-
+		long startTime = System.nanoTime();
+		
 		for (int i = 0; i < numbers.length; i++) {
 			if (numbers[i].equals(keySplit[0])) {
 				solution[0] = numbers[i];
@@ -68,13 +68,16 @@ public class bruteforce {
 				solution[3] = numbers[l];
 			}
 		}
-
+		
+		long endTime = System.nanoTime();
+		
 		soutUI("");
 		sout("password cracked: " 
 					+ solution[0] + " . " 
 					+ solution[1] + " . " 
 					+ solution[2] + " . " 
 					+ solution[3]);
+		sout("time: " + (endTime - startTime) + "ns");
 		soutUI("");
 	}
 }
