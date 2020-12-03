@@ -13,7 +13,7 @@ public class bruteforce {
 	public static void sout(String txt) {
 		System.out.println(txt);
 	}
-	public static void soutUI(String txt) {
+	public static void soutUI() {
 		System.out.println("*************************************");
 	}
 
@@ -23,16 +23,14 @@ public class bruteforce {
 		String key = new String(); // Variable hat NULL
 		String[] numbers = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 		String joinedString = Arrays.toString(numbers);
-		soutUI("");
+		soutUI();
 //		sout(joinedString);
 		
 		do {
 			sout("type in your *4-digit PIN*: ");
 			String enter = scanBot.nextLine();
-			soutUI("");
-			if (enter.length() < 4) {
-				loop = true;
-			} else if (enter.length() == 4) {
+			soutUI();
+			if (enter.length() == 4) {
 				loop = false;
 				sout("perfect! you entered a 4-digit-PIN.");
 				key = enter;
@@ -71,13 +69,13 @@ public class bruteforce {
 		
 		long endTime = System.nanoTime();
 		
-		soutUI("");
+		soutUI();
 		sout("password cracked: " 
 					+ solution[0] + " . " 
 					+ solution[1] + " . " 
 					+ solution[2] + " . " 
 					+ solution[3]);
 		sout("time: " + (endTime - startTime) + "ns");
-		soutUI("");
+		soutUI();
 	}
 }
